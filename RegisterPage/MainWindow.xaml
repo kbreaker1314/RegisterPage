@@ -5,14 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RegisterPage"
         mc:Ignorable="d"
-        Title="Register" FontSize="20" Height="800" Width="600">
+        Title="Register" FontSize="20" FontWeight="Bold" Height="800" Width="600">
+    
     <Border Padding="20" Margin="0 0 0 0">
         <StackPanel Margin="10 0 10 0">
             <TextBlock Text="Please provide your file information." FontSize="30"
                        Foreground="Red"/>
-            <TextBlock Text="E-mail Address*" FontWeight="Bold"
-                       Margin="0 10 0 0"/>
-            <TextBox Height="25" Margin="0 5 10 0"/>
+            <TextBlock Text="E-mail Address*" Margin="0 10 0 0"/>
+            <TextBox x:Name="emailAddress"  Height="25" Margin="0 5 10 10"/>
+
+            <TextBlock Text="First Name*" Margin="0 20 0 0"/>
+            <TextBox x:Name="firstName" Height="25" Margin="0 5 10 10"/>
+
+            <TextBlock Text="Last Name*" Margin="0 20 0 0"/>
+            <TextBox x:Name="lastName" Height="25" Margin="0 5 10 10"/>
+
+            <Button Content="Test run" Margin="50 20" Click="TestRun_Click"/>
         </StackPanel>
     </Border>
 </Window>
