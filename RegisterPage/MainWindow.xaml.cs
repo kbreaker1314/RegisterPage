@@ -20,6 +20,7 @@ namespace RegisterPage
     /// </summary>
     public partial class MainWindow : Window
     {
+        private string first, last;
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +28,9 @@ namespace RegisterPage
 
         private void TestRun_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show($"Email address: {emailAddress.Text} \nFirst name: {firstName.Text} \nLast name: {lastName.Text}");
+            first = firstName.Text;
+            last = lastName.Text;
+            MessageBox.Show($"Email address: {emailAddress.Text} \nFirst name: {first} \nLast name: {last}");
         }
     }
 }
