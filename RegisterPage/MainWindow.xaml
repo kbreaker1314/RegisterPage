@@ -20,6 +20,34 @@
             <TextBlock Text="Last Name*" Margin="0 20 0 0"/>
             <TextBox x:Name="lastName" Height="25" Margin="0 5 10 10"/>
 
+            <TextBlock Text="Job Title*" Margin="0 20 0 0"/>
+            <TextBox x:Name="jobTitle" Height="25" Margin="0 5 10 10"/>
+
+            <TextBlock Text="Company/Organization Name*" Margin="0 10 0 0"/>
+            <TextBox x:Name="companyName" Height="25" Margin="0 5 10 10"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Gender" />
+                <TextBlock Text="Age" Margin="200 0 0 0"/>
+            </StackPanel>
+            <Grid>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <ComboBox x:Name="gender" Margin="0 5 30 10"
+                      Text="Select one" Grid.Column="0">
+                    <ComboBoxItem>Male</ComboBoxItem>
+                    <ComboBoxItem>Female</ComboBoxItem>
+                </ComboBox>
+                <ComboBox x:Name="age" Margin="0 5 30 10"
+                      Text="Select one" Grid.Column="1">
+                    <ComboBoxItem>10~20</ComboBoxItem>
+                    <ComboBoxItem>20~30</ComboBoxItem>
+                </ComboBox>
+            </Grid>
+
+
             <Button Content="Test run" Margin="50 20" Click="TestRun_Click"/>
         </StackPanel>
     </Border>
